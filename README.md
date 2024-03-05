@@ -117,6 +117,7 @@ id = id de la pelicula deseada
     "anio": 0,
     "genero": "string"
 }
+```
 
 ##### Salida
 ```json 
