@@ -69,4 +69,4 @@ En la versión 1.1, se incluye todos lo metodos GET que incluyen paginado.
 
 > Estructura General.
 
-![](./BackCursos/Db/ScreenShoot.png)
+![](./Db/ScreenShoot.png)
