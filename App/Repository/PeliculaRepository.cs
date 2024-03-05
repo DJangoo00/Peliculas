@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 using Domain.Interfaces;
 using Persistence;
+using System.Reflection;
+using System.Collections.Generic;
+using iText.Layout.Properties;
 
 namespace App.Repository;
 
@@ -26,11 +29,21 @@ public class PeliculaRepository : GenericRepository<Pelicula>, IPeliculaReposito
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    public async Task<Pelicula> UpdateAsync (int id, Pelicula entity)
+    public async Task<Pelicula> UpdateAsync(int id, Pelicula entity)
     {
         Pelicula existingPelicula = await GetByIdAsync(id);
 
-        if (entity.Titulo != null)
+        PropertyInfo[] properties = entity.GetType().GetProperties();
+        foreach (var property in properties)
+        {
+            var value = property.GetValue(entity);
+            if (value != null)
+            {
+                property.SetValue(existingPelicula, value);
+            }
+        }
+
+        /* if (entity.Titulo != null)
         {
             existingPelicula.Titulo = entity.Titulo;
         }
@@ -45,7 +58,8 @@ public class PeliculaRepository : GenericRepository<Pelicula>, IPeliculaReposito
         if (entity.Genero != null)
         {
             existingPelicula.Genero = entity.Genero;
-        }
+        } */
+
         return existingPelicula;
     }
 }
