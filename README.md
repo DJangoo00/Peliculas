@@ -115,7 +115,9 @@ id = id de la pelicula deseada
     "titulo": "string",
     "director": "string",
     "anio": 0,
-    "genero": "string"
+    "genero": "string",
+    "id":0
+
 }
 ```
 
