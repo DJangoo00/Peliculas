@@ -56,8 +56,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 
     public virtual void Update(T entity)
     {
-        _context.Set<T>()
-            .Update(entity);
+        _context.Set<T>().Update(entity);
     }
 
     //metodo para paginado

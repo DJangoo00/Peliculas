@@ -23,6 +23,29 @@ public class PeliculaRepository : GenericRepository<Pelicula>, IPeliculaReposito
     public override async Task<Pelicula> GetByIdAsync(int id)
     {
         return await _context.Peliculas
-            .FirstOrDefaultAsync(p =>  p.Id == id);
+            .FirstOrDefaultAsync(p => p.Id == id);
+    }
+
+    public async Task<Pelicula> UpdateAsync (int id, Pelicula entity)
+    {
+        Pelicula existingPelicula = await GetByIdAsync(id);
+
+        if (entity.Titulo != null)
+        {
+            existingPelicula.Titulo = entity.Titulo;
+        }
+        if (entity.Director != null)
+        {
+            existingPelicula.Director = entity.Director;
+        }
+        if (entity.Anio != 0)
+        {
+            existingPelicula.Anio = entity.Anio;
+        }
+        if (entity.Genero != null)
+        {
+            existingPelicula.Genero = entity.Genero;
+        }
+        return existingPelicula;
     }
 }

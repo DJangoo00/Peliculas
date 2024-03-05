@@ -84,20 +84,27 @@ public class PeliculasController : BaseApiController
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public async Task<ActionResult<PeliculaDto>> Put(int id, [FromBody] PeliculaDto entidadDto)
+    public async Task<ActionResult<Pelicula>> Put(int id, [FromBody] PeliculaDto entidadDto)
     {
         if (entidadDto == null)
         {
             return NotFound();
         }
         var entidad = this.mapper.Map<Pelicula>(entidadDto);
-        unitofwork.Peliculas.Update(entidad);
-        await unitofwork.SaveAsync();
-        return entidadDto;
+        try
+        {
+            Pelicula result = await unitofwork.Peliculas.UpdateAsync(id, entidad);
+            await unitofwork.SaveAsync();
+            return result;
+        }
+        catch
+        {
+            return BadRequest();
+        }
     }
 
     //metodos version 1.1
-    
+
     [HttpGet("pagination")]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
