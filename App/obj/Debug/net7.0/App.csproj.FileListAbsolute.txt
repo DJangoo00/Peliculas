@@ -32,3 +32,4 @@ D:\dalgr\Documents\Dev\DataGlobal\Peliculas\App\obj\Debug\net7.0\App.dll
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\App\obj\Debug\net7.0\refint\App.dll
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\App\obj\Debug\net7.0\App.pdb
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\App\obj\Debug\net7.0\ref\App.dll
+D:\dalgr\Documents\Dev\DataGlobal\Peliculas\App\obj\Debug\net7.0\App.sourcelink.json

@@ -190,3 +190,4 @@ D:\dalgr\Documents\Dev\DataGlobal\Peliculas\API\obj\Debug\net7.0\refint\API.dll
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\API\obj\Debug\net7.0\API.pdb
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\API\obj\Debug\net7.0\ref\API.dll
+D:\dalgr\Documents\Dev\DataGlobal\Peliculas\API\obj\Debug\net7.0\API.sourcelink.json

@@ -31,7 +31,123 @@ El Proyecto incluye Versionado, RateLimit, JWT
 En la versión por defecto es 1.0, esta incluye los metodos solicitados.
 En la versión 1.1, se incluye todos lo metodos GET que incluyen paginado.
 
+### Endpoints 🔗
 
+#### Crear
+Metodo: POST
+/api/Peliculas
+
+##### Entrada
+- Body:
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string"
+}
+```
+##### Salida
+
+- Codigo de estado HTTP 201
+
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string",
+    "id":0
+}
+```
+
+#### Obtener
+
+Metodo: GET
+/api/Peliculas
+
+##### Salida
+
+- Codigo de estado HTTP 204
+
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string",
+    "id":0
+}
+```
+
+#### Obtener por ID
+
+Metodo: GET
+/api/Peliculas/{id}
+
+##### Entrada
+id = id de la pelicula buscada
+
+##### Salida
+
+- Codigo de estado HTTP 204
+
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string",
+    "id":0
+}
+```
+
+#### Actualizar
+
+Metodo: PUT
+/api/Peliculas/{id}
+
+##### Entrada
+id = id de la pelicula deseada
+- Body:
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string"
+}
+
+##### Salida
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string",
+    "id":0
+}
+```
+
+#### Eliminar
+
+Metodo: DELETE
+/api/Peliculas/{id}
+
+##### Entrada
+id = id de la pelicula deseada
+- Body:
+```json 
+{
+    "titulo": "string",
+    "director": "string",
+    "anio": 0,
+    "genero": "string"
+}
+```
+##### Salida
+
+- Codigo de estado HTTP 204
 
 ## Tecnologias 💻
 
@@ -47,7 +163,7 @@ En la versión 1.1, se incluye todos lo metodos GET que incluyen paginado.
 ### Dependencias Usadas 📦
 
 
-#### Dependencias del BackEnd
+#### Dependencias del BackEnd 🔧
 -   "AspNetCoreRateLimit"
 -   "AutoMapper.Extensions.Microsoft.DependencyInjection"
 -   "Microsoft.AspNetCore.Authentication.JwtBearer"

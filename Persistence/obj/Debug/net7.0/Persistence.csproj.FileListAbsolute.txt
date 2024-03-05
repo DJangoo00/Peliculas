@@ -28,3 +28,4 @@ D:\dalgr\Documents\Dev\DataGlobal\Peliculas\Persistence\obj\Debug\net7.0\Persist
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\Persistence\obj\Debug\net7.0\Persistence.pdb
 D:\dalgr\Documents\Dev\DataGlobal\Peliculas\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+D:\dalgr\Documents\Dev\DataGlobal\Peliculas\Persistence\obj\Debug\net7.0\Persistence.sourcelink.json

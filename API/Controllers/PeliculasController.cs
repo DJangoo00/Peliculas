@@ -11,12 +11,12 @@ using Microsoft.AspNetCore.Authorization;
 namespace API.Controllers;
 [ApiVersion("1.0")]
 [ApiVersion("1.1")]
-public class PeliculaController : BaseApiController
+public class PeliculasController : BaseApiController
 {
     private readonly IUnitOfWork unitofwork;
     private readonly IMapper mapper;
 
-    public PeliculaController(IUnitOfWork unitofwork, IMapper mapper)
+    public PeliculasController(IUnitOfWork unitofwork, IMapper mapper)
     {
         this.unitofwork = unitofwork;
         this.mapper = mapper;
